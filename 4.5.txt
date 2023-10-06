@@ -1,0 +1,25 @@
+#include<iostream>
+#include<iomanip>
+#include<cmath>
+#include<stack>
+#include<string>
+using namespace std;
+const double pi = 3.141592653589793238;
+int main() {
+	int mice{};
+	int brown{};
+	int white{};
+	cout << "How many brown mice do you have?";
+	cin >> brown;
+	cout << "How many white mice do you have?";
+	cin >> white;
+	mice = brown + white;
+	cout << "You have " << mice << (mice == 1 ? "mouse" : "mice") << " in total." << endl;
+	if (mice != 0) {
+		if (mice != 1)cout << "Of these mice, N is a/are brown mouse/mice" << endl;
+		else cout << "It is a brown/white mouse" << endl;
+	}
+	else {
+
+	}
+}

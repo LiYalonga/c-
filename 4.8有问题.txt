@@ -1,0 +1,32 @@
+#include<iostream>
+#include<iomanip>
+#include<cmath>
+#include<stack>
+#include<string>
+#include<cctype>
+using namespace std;
+const double pi = 3.141592653589793238;
+int main() {
+	double n;
+	cin >> n;
+	if (n >= 0 && n <= 10) {
+		n *= 100;//转换为美分
+		
+		cout << (int)n << endl;                    //转换有时候会出错
+		cout << static_cast<int>(n) << endl;		//n=2.51  转换后是250
+		cout << n << endl;
+
+		int count_25cent{};
+		int count_10cent{};
+		int count_5cent{};
+		int count_1cent{};
+		count_25cent = static_cast<int>(n / 25);
+		count_10cent = static_cast<int>(((int)n % 25) / 10);
+		count_5cent = static_cast<int>((((int)n % 25) % 10) / 5);
+		count_1cent = static_cast<int>((int)n % 5);
+		cout << count_25cent << endl;
+		cout << count_10cent << endl;
+		cout << count_5cent << endl;
+		cout << count_1cent << endl;
+	}
+}

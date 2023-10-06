@@ -1,0 +1,23 @@
+#include<iostream>
+#include<iomanip>
+#include<cmath>
+#include<stack>
+#include<string>
+using namespace std;
+const double pi = 3.141592653589793238;
+int main() {
+	double n;
+	cin >> n;
+	if (n >= 1.0 && n <= 100.0) {
+		cout << "n in 1-100" << endl;
+		if (n == 50) {
+			cout << "n==50" << endl;
+		}
+		else {
+			if (n < 50)cout << "n<50" << endl;
+			else cout << "n>50" << endl;
+		}
+	}
+	
+
+}

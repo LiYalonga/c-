@@ -1,0 +1,27 @@
+#include<iostream>
+#include<iomanip>
+#include<cmath>
+#include<stack>
+#include<string>
+#include<cctype>
+#include<istream>
+#include<stdio.h>
+#include<bitset>
+#include<vector>
+using namespace std;
+const double pi = 3.141592653589793238;
+int main() {
+	int n; cin >> n;
+	vector<int>vec;
+	for (int i = 1; i <= n; i++)vec.push_back(i);
+	int line = 0;
+	for (vector<int>::iterator it = vec.begin(); it != vec.end(); it++) {
+		if (*it % 7 != 0 && *it % 13 != 0)
+		{
+			cout << setw(6) << *it;
+			line++;
+		}
+		if (line % 10 == 0)cout << endl;
+	}
+	return 0;
+}

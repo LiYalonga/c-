@@ -1,0 +1,23 @@
+#include<iostream>
+#include<iomanip>
+#include<cmath>
+#include<stack>
+#include<string>
+#include<cctype>
+#include<istream>
+using namespace std;
+const double pi = 3.141592653589793238;
+int main() {
+	char str[100];
+	cin.getline(str,100);
+	int i = 0;
+	int count = 0;
+	if (str[0] == '#')cout << 0 << endl;
+	else {
+		do
+		{
+			if (str[i] != ' ')count++;
+		} while (str[++i] != '#');
+	}cout << count << endl;
+	
+}

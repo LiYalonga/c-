@@ -1,0 +1,34 @@
+#include<iostream>
+#include<iomanip>
+#include<cmath>
+#include<stack>
+#include<string>
+#include<cctype>
+using namespace std;
+const double pi = 3.141592653589793238;
+bool f(char c) {//判断是否是元音字母
+	char ch = static_cast<char>(tolower(c));
+	if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u')return true;
+	return false;
+
+}
+int main() {
+	char c;
+	while (cin >> c) {
+		if (f(c))cout << "a e i o u" << endl;
+		if (islower(c))cout << "is lower" << endl;
+		//cout << tolower(c) << endl;//输出的是整数
+		cout << static_cast<char>(tolower(c)) << endl;//输出小写字母
+		int ret = static_cast<int>(c);
+		stack<int>s;
+		while (ret != 0) {
+			s.push(ret % 2);
+			ret /= 2;
+		}int count = 8 - s.size();
+		while (count--)cout << 0;
+		while (!s.empty()) {
+			cout << s.top();
+			s.pop();
+		}cout << endl;
+	}
+}

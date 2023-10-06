@@ -1,0 +1,15 @@
+#include<iostream>
+#include<iomanip>
+#include<cmath>
+using namespace std;
+const double pi = 3.141592653589793238;
+//2.5代表2.5英尺,32+6英寸
+int main() {
+	double h,w;
+	cin>>w>>h;
+	w /= 2.2;
+	h = h * 0.3048;
+	cout << "BMI: " << w / (h * h) << endl;
+	return 0;
+
+}

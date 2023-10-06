@@ -1,0 +1,16 @@
+#include<iostream>
+#include<iomanip>
+#include<cmath>
+#include<stack>
+#include<string>
+#include<cctype>
+using namespace std;
+const double pi = 3.141592653589793238;
+int main() {
+	int n;
+	cin >> n;
+	for (int i = 1; i <= n; i++) {
+		if (i % 2 == 1)cout << i * i << endl;
+	}
+	
+}

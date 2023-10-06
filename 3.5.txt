@@ -1,0 +1,17 @@
+#include<iostream>
+#include<iomanip>
+#include<cmath>
+#include<stack>
+#include<string>
+using namespace std;
+const double pi = 3.141592653589793238;
+int main() {
+	enum class Color { Red=0xFF0000, Green=0x00FF00, Yello=0xFFFF00, Purple=0x800080,Blue=0x0000FF,Black=0x000000,White=0xFFFF };
+	Color Y{ Color::Yello };
+	Color P{ Color::Purple };
+	Color G{ Color::Green };
+	cout <<hex<<static_cast<int>(Y) << endl;
+	cout <<hex<<static_cast<int>(P) << endl;
+	cout <<hex<<static_cast<int>(G) << endl;
+
+}

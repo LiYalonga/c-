@@ -1,0 +1,31 @@
+#include<iostream>
+#include<iomanip>
+#include<cmath>
+#include<stack>
+#include<string>
+#include<cctype>
+#include<istream>
+#include<stdio.h>
+#include<bitset>
+using namespace std;
+const double pi = 3.141592653589793238;
+int main() {
+	char arr[1000];
+	cin.getline(arr, 1000);
+	int i = 0;
+	int j = 0;
+	while (arr[j] != '\0')j++;
+	//arr[j]='\0'
+	j--;
+	while (i < j) {//swap(arr[i],arr[j])
+		char temp = arr[i];
+		arr[i] = arr[j];
+		arr[j] = temp;
+		i++; j--;
+	}i = 0;
+	while (arr[i] != '\0') {
+		cout << arr[i];
+		i++;
+	}
+	return 0;
+}

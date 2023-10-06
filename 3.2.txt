@@ -1,0 +1,20 @@
+#include<iostream>
+#include<iomanip>
+#include<cmath>
+using namespace std;
+const double pi = 3.141592653589793238;
+//2.5代表2.5英尺,32+6英寸
+int main() {
+	double board_length, board_width, s;
+	cin >> board_length >> board_width >> s;
+	//将英尺转换成英寸
+	board_length *=12.0;
+	board_width *= 12.0;
+	double n = board_length / s;
+	double m = board_width / s;
+	int a = floor(n);
+	int b = floor(m);
+	cout << a * b << endl;
+	return 0;
+
+}

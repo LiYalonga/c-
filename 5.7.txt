@@ -1,0 +1,29 @@
+#include<iostream>
+#include<iomanip>
+#include<cmath>
+#include<stack>
+#include<string>
+#include<cctype>
+#include<istream>
+#include<stdio.h>
+#include<bitset>
+#include<vector>
+using namespace std;
+const double pi = 3.141592653589793238;
+int main() {
+	double all{};
+	double produce[100], sum[100], price[100];
+	double chengben[100];
+	int n;//产品个数
+	cin >> n;
+	for (int i = 0; i < n; i++) {
+		cin >> produce[i] >> sum[i] >> price[i];
+		all += sum[i] * price[i];
+		chengben[i] = sum[i] * price[i];
+	}
+	for (int i = 0; i < n; i++) {
+		cout << setw(5) << produce[i] << setw(5) << sum[i] << setw(5) 
+			<< price[i] << setw(5) << chengben[i] << setw(5)<<endl;
+	}cout << all << endl;
+	return 0;
+}

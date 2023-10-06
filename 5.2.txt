@@ -1,0 +1,20 @@
+#include<iostream>
+#include<iomanip>
+#include<cmath>
+#include<stack>
+#include<string>
+#include<cctype>
+using namespace std;
+const double pi = 3.141592653589793238;
+int main() {
+	int n;
+	int sum{ 0 }, count{ 0 };
+	while (cin>>n&&n != 0) {//n==10结束输入
+		sum += n;
+		count++;
+	}
+	double ret = static_cast<double>(sum);
+	double z = static_cast<double>(count);
+	cout << ret / z << endl;
+	
+}

@@ -1,0 +1,28 @@
+#include<iostream>
+#include<iomanip>
+#include<cmath>
+#include<stack>
+#include<string>
+#include<cctype>
+#include<istream>
+#include<stdio.h>
+#include<bitset>
+using namespace std;
+const double pi = 3.141592653589793238;
+int main() {
+    int a;
+    cin>>a;
+    bitset<8>binary(a);
+    cout << binary << endl;
+    bitset<8>binary_fan(~a);
+    cout << binary_fan << endl;
+    bitset<8>binary_bu(~a+1);
+    cout << binary_bu << endl;
+
+    int binary_int = binary.to_ulong();
+    int binary_fan_int = binary_fan.to_ulong();
+    int binary_bu_int = binary_bu.to_ulong();
+    
+    cout <<hex<<setw(12)<<binary_int<< setw(12) << binary_fan_int<< setw(12) << binary_bu_int << endl
+        <<dec<<setw(12)<< binary_int  << setw(12) << binary_fan_int  << setw(12) << binary_bu_int << endl;
+}
