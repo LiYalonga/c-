@@ -1,0 +1,29 @@
+#include<iostream>
+#include<memory>
+#include<vector>
+#include<iomanip>
+#include<iostream>
+#include<memory>
+#include<vector>
+#include<iomanip>
+#include<cmath>
+#include<stack>
+#include<string>
+#include<cctype>
+#include<sstream>
+#include<stdio.h>
+using namespace std;
+int main() {
+	double n;
+	cin >> n;
+	auto pvalues{ make_unique<double[]>(n) };
+	auto sum{ make_unique<double>(0.0)};
+	auto ret{ make_unique<double>(0.0) };
+	for (double  i = 0; i < n; i++) {
+		pvalues[i] = 1.0 / ((i + 1) * (i + 1));
+		*sum += pvalues[i];
+	}
+	*ret = 6 * (*sum);
+	cout << *ret << endl;
+	return 0;
+}
