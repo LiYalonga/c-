@@ -1,0 +1,33 @@
+#include<iostream>
+#include<istream>
+#include<memory>
+#include<vector>
+#include<iomanip>
+#include<cmath>
+#include<stack>
+#include<string>
+#include<cctype>
+#include<sstream>
+#include<stdio.h>
+#include<algorithm>
+using namespace std;
+#define N 1005
+int string_to_int(string str) {
+	int n=0;
+	for (int i = str.length()-1,j=0; i >= 0; i--,j++) {
+		n = n + (str[i] - '0') * pow(10, j);
+	}
+	return n;
+}
+int main() {
+	string str;
+	vector<string>vec_str;
+	while (cin >> str && str != "#") {
+		vec_str.push_back(str);
+	}
+	int num = 0;
+	for (auto it = vec_str.begin(); it != vec_str.end(); it++) {
+		num += string_to_int(*it);
+	}
+	cout << num << endl;
+}

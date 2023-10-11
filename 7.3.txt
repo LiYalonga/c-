@@ -1,0 +1,53 @@
+#include<iostream>
+#include<memory>
+#include<vector>
+#include<iomanip>
+#include<istream>
+#include<memory>
+#include<vector>
+#include<iomanip>
+#include<cmath>
+#include<stack>
+#include<string>
+#include<cctype>
+#include<sstream>
+#include<stdio.h>
+#include<algorithm>
+using namespace std;
+#define N 1005
+char ch_addr1[N];
+char ch_addr2[N];
+int main() {
+	int n;
+	char ch_arr[200];
+	string str1,str2;
+	getline(cin, str1);
+	cin >> str2;
+	int index = 0; //strssastrfjjstr
+	if (index == str1.find(str2)) {//第一个单词是
+		//判断单词后是否是空格
+		if (str1[str2.length()] == ' ') {
+			cout << 0 << endl;
+			for (int i = 0; i < str2.length(); i++) {
+				str1[i] = '*';
+			}
+		}
+	}
+	else {
+
+	}
+
+	for (; index < str1.length(); ) {//如果第一个单词是str2则无法判断
+		index=str1.find(str2, index+1);
+		if (index != -1) {
+			//判断找到的前面和后面是不是空格或者换行符
+			if (str1[index - 1] == ' ' && (str1[index + str2.length()] == ' ' || str1[index + str2.length()] == '\n')) {
+				for (int j = index; j < index + str2.length(); j++) {
+					str1[j] = '*';
+				}
+			}
+		}
+	}
+	cout << str1 << endl;
+	return 0;
+}
